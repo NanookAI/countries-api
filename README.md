@@ -1,11 +1,12 @@
-# Countries API — Claude Code Plugin
+# Countries API — AI Agent Skill
 
-A Claude Code plugin that teaches Claude how to use the free
+An AI agent skill that teaches your agent how to use the free
 [countries.dev](https://countries.dev) REST API — no API key, no signup, no
-rate-limit tiers.
+rate-limit tiers. Works with any tool that reads the `SKILL.md` format, and
+is also packaged as a Claude Code plugin.
 
-Once installed, just ask questions in natural language and Claude picks the
-right endpoint, parameters, and workarounds automatically:
+Once installed, just ask questions in natural language and your agent picks
+the right endpoint, parameters, and workarounds automatically:
 
 - "Which countries border Germany?"
 - "Top 10 countries by population in Asia"
@@ -33,23 +34,40 @@ doesn't accept city names, unknown query params fail silently).
 
 ## Installation
 
-**As a plugin** (recommended):
+### Claude Code (plugin marketplace — recommended)
+
+This plugin is distributed through the
+[NanookAI/skills](https://github.com/NanookAI/skills) marketplace. Inside
+Claude Code, run:
 
 ```
-/plugin install countries-api
+/plugin marketplace add NanookAI/skills
+/plugin install countries-api@nanookai-skills
 ```
 
-or add this repository as a marketplace source and install from there.
+The skill is then available in every project, and `/plugin marketplace update`
+picks up new versions.
 
-**As a standalone skill** — copy the skill folder into your skills directory:
+### Claude Code (per-project)
+
+Copy the skill folder into your project's `.claude/skills/` directory:
 
 ```bash
-# available in every project
-cp -r skills/countries-api ~/.claude/skills/
-
-# or per-project
-cp -r skills/countries-api <your-project>/.claude/skills/
+cp -r skills/countries-api /path/to/your-project/.claude/skills/
 ```
+
+### Claude Code (personal, all projects)
+
+```bash
+cp -r skills/countries-api ~/.claude/skills/
+```
+
+### Claude.ai / other agents
+
+Package the skill folder (respecting `.skillignore`) into a `.skill` bundle,
+or upload the `skills/countries-api/` folder contents wherever your agent
+platform accepts skills. The skill is self-contained — no scripts, no
+dependencies.
 
 ## Repository layout
 
