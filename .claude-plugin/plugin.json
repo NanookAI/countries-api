@@ -1,0 +1,12 @@
+{
+  "name": "countries-api",
+  "displayName": "Countries-API",
+  "description": "",
+  "version": "1.0.0",
+  "author": {
+    "name": "NanookAI",
+    "email": "app030242@gmail.com"
+  },
+  "homepage": "https://github.com/NanookAI/countries-api",
+  "keywords": ["api"]
+}
