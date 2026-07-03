@@ -1,12 +1,23 @@
 {
   "name": "countries-api",
   "displayName": "Countries-API",
-  "description": "",
+  "description": "Teaches Claude the free countries.dev REST API: country data, city/place search, postal codes, IP geolocation, and distances — no API key required.",
   "version": "1.0.0",
   "author": {
     "name": "NanookAI",
     "email": "app030242@gmail.com"
   },
   "homepage": "https://github.com/NanookAI/countries-api",
-  "keywords": ["api"]
+  "keywords": [
+    "api",
+    "rest-api",
+    "countries",
+    "countries-api",
+    "geolocation",
+    "geocoding",
+    "postal-codes",
+    "ip-lookup",
+    "geonames",
+    "claude-skill"
+  ]
 }
